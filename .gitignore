@@ -1,0 +1,10 @@
+*.o
+*.out
+*.exe
+*.class
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
