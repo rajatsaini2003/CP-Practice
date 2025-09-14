@@ -23,6 +23,7 @@ int main(){
             }
         }
         if(cnt)ans++;
+        if(ans>2)ans=2;
         cout<<ans<<endl;
     }
 }

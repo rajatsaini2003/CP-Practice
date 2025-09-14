@@ -10,16 +10,20 @@ int main(){
         int n;
         cin>>n;
         vector<int>arr(n);
+        
         for(int i=0;i<n;i++){
             cin>>arr[i];
         }
-        for(int i=0;i<n;i++){
-            if(arr[i]==1)arr[i]++;
+        int ans=arr[n-1]-arr[0];
+        for(int i=1;i<n;i++){
+            ans=max(ans,arr[i]-arr[0]);
         }
         for(int i=0;i<n-1;i++){
-            if(arr[i+1]%arr[i]==0)arr[i+1]++;
+            ans=max(ans,arr[n-1]-arr[i]);
         }
-        for(auto i:arr)cout<<i<<" ";
-        cout<<endl;
+        for(int i=0;i<n-1;i++){
+            ans=max(ans,arr[i]-arr[i+1]);
+        }
+        cout<<ans<<endl;
     }
 }
